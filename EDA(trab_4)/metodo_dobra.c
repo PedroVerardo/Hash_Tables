@@ -72,12 +72,15 @@ int metodo_da_dobra(int chave, int tam_esq)
     if (tam_dir == 0) 
     {
         if (qtd_casas(chave) > tam_esq) return numero_dir(chave, tam_esq);
+        return chave;
     }
 
     if (tam_esq < tam_dir)
     {
         dif = tam_dir - tam_esq;
         chave = parte_esq * pow(10, dif) + parte_dir;
+        if (qtd_casas(chave) > tam_dir) chave = numero_dir(chave, tam_dir);
+        return metodo_da_dobra(chave, tam_esq);
     }
 
     if (tam_esq == tam_dir) 
@@ -89,7 +92,7 @@ int metodo_da_dobra(int chave, int tam_esq)
     if (tam_esq > tam_dir)
     {
         dif = tam_esq - tam_dir;
-        chave = parte_dir * pow(10, dif) + parte_esq;
+        chave = parte_dir + parte_esq;
     } 
 
     return chave;

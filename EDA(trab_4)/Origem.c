@@ -37,7 +37,7 @@ int main(void)
 
 
 	//----------------------
-	int x = metodo_da_dobra(183453, 2);
+	int x = metodo_da_dobra(183453, 3);
 	printf("%d\n", x);
 
 
