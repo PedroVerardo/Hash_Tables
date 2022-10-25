@@ -129,6 +129,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="cria_e_inicializa_tabela.c" />
+    <ClCompile Include="insere.c" />
     <ClCompile Include="metodo_divisao.c" />
     <ClCompile Include="metodo_dobra.c" />
     <ClCompile Include="metodo_multiplicacao.c" />
@@ -136,6 +137,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="cria_e_inicializa_tabela.h" />
+    <ClInclude Include="Insere.h" />
     <ClInclude Include="metodo_divisao.h" />
     <ClInclude Include="metodo_dobra.h" />
     <ClInclude Include="metodo_multiplicacao.h" />

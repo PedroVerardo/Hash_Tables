@@ -7,8 +7,8 @@ struct node {
 };
 typedef struct node Node;
 
-int* variacao_interior(const int TAM);
+int* variacao_interior(const int tam);
 
-Node** variacao_exterior(int TAM);
+Node** variacao_exterior(int tam);
 
 #endif // !CRIA_TABELA
