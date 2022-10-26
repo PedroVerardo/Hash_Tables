@@ -3,7 +3,7 @@
 #include "metodo_divisao.h"
 #include "metodo_dobra.h"
 #include "Insere.h"
-#define TAM 10
+#define TAM 11
 
 
 void printa(int* vec, int tam)
@@ -20,13 +20,13 @@ void insere_chave(int* chaves, int* vec, int tam)
 
 	for (int i = 0; i < tam; i++)
 	{
-		enderecamento_interno_v2(vec, chaves[i],tam);
+		enderecamento_aberto_v1(vec, chaves[i],tam,7);
 	}
 }
 
 int main(void)
 {
-	int chaves[] = { 1,2,3,4,5,6,7,8,9,10 };
+	int chaves[] = { 1,11,3,17,29,38,43,11,9,2,34 };
 
 	int* vec = variacao_interior(TAM);
 
