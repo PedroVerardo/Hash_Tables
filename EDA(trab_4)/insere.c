@@ -13,13 +13,13 @@ void enderecamento_interno_v1(long long int* tabela,long long int val, int tam)
     tabela[id] = val;
 }
 
-void enderecamento_interno_v2(long long int* tabela,long long int val, int tam)
+void enderecamento_interno_v2(long long int* tabela,long long int val, int tam, int*colisao)
 {
-    int id = metodo_divisao_v1(val, tam);
-    printf(" endereco: %d\n", id);
+    int id = metodo_divisao_v2(val, tam,37);
     while (tabela[id] != 0)
     {
         id = (id + 1) % tam;
+        (*colisao)++;
     }
     tabela[id] = val;
 }
@@ -50,21 +50,22 @@ void enderecamento_aberto_v2(long long int* tabela, long long int val, int tam)
         
         ant = id;
 
-        id = (id + ant * tentativa)%tam;
+        id = (id + ant * tentativa) % tam;
 
         tentativa++;
     }
     tabela[id] = val;
 
 }
-void enderecamento_aberto_v3(long long int* tabela, long long int val, int tam)
+void enderecamento_aberto_v3(long long int* tabela, long long int val, int tam, int* colisao)
 {
-    int id = metodo_divisao_v2(val, tam,13);
+    int id = metodo_divisao_v2(val, tam,37);
     int tentativa = 1;
     while (tabela[id] != 0)
     {
         id = (id + tentativa) % tam;
         tentativa++;
+        (*colisao)++;
     }
     tabela[id] = val;
 }
