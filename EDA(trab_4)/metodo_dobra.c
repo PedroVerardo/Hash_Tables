@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include "metodo_dobra.h"
 
-int qtd_casas(long int val)
+int qtd_casas(long long int val)
 /*devolve a casa que o numero colocado esta dezena, centena, milhar*/
 {
     int i;
@@ -15,17 +15,17 @@ int qtd_casas(long int val)
 }
 
 
-int numero_dir(long int val, int redutor)
+int numero_dir(long long int val, int redutor)
 /*funcao para retornar o resto da divisão por um numero multiplo de 10*/
 {
-    return val % (long int)pow(10, redutor);
+    return val % (long long int)pow(10, redutor);
 }
 
-long int numero_esq(long int val, int redutor)
+long long int numero_esq(long long int val, int redutor)
 /*funcao para retornar o resto da divisão por uma potencia de 10*/
 {
     int i;
-   long long int ans = val;
+    long long int ans = val;
     int redutor_real;
 
     //ver quantas casas o numero tem
@@ -45,7 +45,7 @@ long int numero_esq(long int val, int redutor)
     return val / pow(10, redutor_real);
 }
 
-long int inverte(long int val,long long int acumulador)
+long long int inverte(long long int val,long long int acumulador)
 /*inverte um numero recursivamente*/
 {
     if (val == 0)

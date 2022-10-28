@@ -1,4 +1,4 @@
 #include <math.h>
-int metodo_multiplicacao_v1(int chave, int tam);
-int metodo_multiplicacao_v2(int chave, int tam, int mult);
+long long int metodo_multiplicacao_v1(long long int chave, int tam);
+long long int metodo_multiplicacao_v2(long long int chave, int tam, int mult);
  

@@ -1,11 +1,11 @@
 #include <stdio.h>
 
-long int metodo_divisao_v1(long long int chave, int tam)
+long long int metodo_divisao_v1(long long int chave, int tam)
 {
 	return chave % tam;
 }
 
-long int metodo_divisao_v2(long long int chave, int tam, int c)
+long long int metodo_divisao_v2(long long int chave, int tam, int c)
 {
 	if (mdc(c, tam) != 1)
 	{
@@ -16,9 +16,9 @@ long int metodo_divisao_v2(long long int chave, int tam, int c)
 	return chave*c % tam;
 }
 
-int mdc(int a, int b)
+int mdc(long long int a, long long int b)
 {
-	int resto;
+	long long int resto;
 
 	while (b != 0) 
 	{
