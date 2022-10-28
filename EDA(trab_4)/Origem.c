@@ -6,17 +6,16 @@
 #define TAM 10
 
 
-void printa(int* vec, int tam)
+void printa(long long int* vec, int tam)
 {
 	for (int i = 0; i < tam; i++)
 	{
-		printf("%d ", vec[i]);
+		printf("%lld ", vec[i]);
 	}
 }
 
-void insere_chave(int* chaves, int* vec, int tam)
+void insere_chave(long long int* chaves,long long int* vec, int tam)
 {
-	int x;
 
 	for (int i = 0; i < tam; i++)
 	{
@@ -26,9 +25,9 @@ void insere_chave(int* chaves, int* vec, int tam)
 
 int main(void)
 {
-	int chaves[] = { 1,2,3,4,5,6,7,8,9,10 };
+	long long int chaves[] = { 10196280737,2,46753612777,87862523563,5,6,7,8,9,10 };
 
-	int* vec = variacao_interior(TAM);
+	long long int* vec = variacao_interior(TAM);
 
 	insere_chave(chaves, vec, TAM);
 
@@ -36,8 +35,8 @@ int main(void)
 
 
 	//----------------------//
-	int x = metodo_da_dobra(183453, 3);
-	printf("\n%d\n", x);
+	long long int x = metodo_da_dobra(183453, 3);
+	printf("\n%lld\n", x);
 
 
 	return 0;

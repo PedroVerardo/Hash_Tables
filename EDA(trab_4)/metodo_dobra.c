@@ -2,11 +2,11 @@
 #include <stdio.h>
 #include "metodo_dobra.h"
 
-int qtd_casas(int val)
+int qtd_casas(long int val)
 /*devolve a casa que o numero colocado esta dezena, centena, milhar*/
 {
     int i;
-    int ans = val;
+   long long int ans = val;
     for (i = 0; ans > 0; i++)
     {
         ans = ans / 10;
@@ -15,17 +15,17 @@ int qtd_casas(int val)
 }
 
 
-int numero_dir(int val, int redutor)
+int numero_dir(long int val, int redutor)
 /*funcao para retornar o resto da divisão por um numero multiplo de 10*/
 {
-    return val % (int)pow(10, redutor);
+    return val % (long int)pow(10, redutor);
 }
 
-int numero_esq(int val, int redutor)
+long int numero_esq(long int val, int redutor)
 /*funcao para retornar o resto da divisão por uma potencia de 10*/
 {
     int i;
-    int ans = val;
+   long long int ans = val;
     int redutor_real;
 
     //ver quantas casas o numero tem
@@ -45,7 +45,7 @@ int numero_esq(int val, int redutor)
     return val / pow(10, redutor_real);
 }
 
-int inverte(int val, int acumulador)
+long int inverte(long int val,long long int acumulador)
 /*inverte um numero recursivamente*/
 {
     if (val == 0)
@@ -55,7 +55,7 @@ int inverte(int val, int acumulador)
     return inverte(val / 10, acumulador * 10 + val % 10);
 }
 
-int metodo_da_dobra(int chave, int tam_esq)
+long long int metodo_da_dobra(long long int chave, int tam_esq)
 /*:chave: e o atributo que sera usado na funcao hash para obter a posicao
  *:tam_esq: se o tamanho do vetor esta na casa da dzena(1), centena(2), milhar(3)
 */

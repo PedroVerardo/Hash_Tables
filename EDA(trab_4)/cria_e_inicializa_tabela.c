@@ -2,9 +2,9 @@
 #include "cria_e_inicializa_tabela.h"
 
 
-int* variacao_interior(const int TAM)
+long long int* variacao_interior(const int TAM)
 {
-    int* tabela = (int*)malloc(sizeof(int) * TAM);
+   long long int* tabela = (long long int*)malloc(sizeof(long long int) * TAM);
 
     for (int i = 0; i < TAM; i++)
     {

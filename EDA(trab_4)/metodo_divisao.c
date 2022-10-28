@@ -1,11 +1,11 @@
 #include <stdio.h>
 
-int metodo_divisao_v1(int chave, int tam)
+long int metodo_divisao_v1(long long int chave, int tam)
 {
 	return chave % tam;
 }
 
-int metodo_divisao_v2(int chave, int tam, int c)
+long int metodo_divisao_v2(long long int chave, int tam, int c)
 {
 	if (mdc(c, tam) != 1)
 	{
